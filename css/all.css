@@ -5840,6 +5840,29 @@ td.visible-print {
 body, h1, h2, h3, h4, h5, h6 {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 200;
+	color:black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color:black;
+}
+
+.navbar {
+	margin-bottom:20px;
+	min-height:80px;
+}
+.navbar-nav {
+    padding-top: 15px;
+}
+
+.navbar-nav > li > a, .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
+    font-size:125%;
+	font-weight:400;
+	color:black;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: black;
 }
 
 .lead {
@@ -5851,7 +5874,8 @@ body, h1, h2, h3, h4, h5, h6 {
 	padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
 	padding-bottom: 50px;
 	color: #f8f8f8;
-	background: url(../img/shattered-island.gif);
+	/*background: url(../img/shattered-island.gif);*/
+	background-color:black;
 	/*background-size: cover;*/
 	text-align: center;
 }
@@ -5865,18 +5889,30 @@ body, h1, h2, h3, h4, h5, h6 {
 .intro-message > h1 {
 	margin: 0;
 	font-size: 5em;
+	color:#4a91ae;
 	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 .intro-divider {
 	width: 400px;
-	border-top: 1px solid #f8f8f8;
+	border-top: 1px solid #4a91ae;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .intro-message > h3 {
+	color:#4a91ae;
 	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
+
+.btn-default {
+    background-color: #9f4949;
+    border-color: #662f2f;
+    color: #fff;
+}
+
+footer {background-color:#bbb;}
+.pmd-footer {text-align:center;}
+
 
 @media (max-width: 767px) {
 	.intro-message {
@@ -5910,13 +5946,14 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 .content-section-a {
-	background-color: #f8f8f8;
+	background-color: white;
 	padding: 50px 0;
 }
 
 .content-section-b {
-	border-top: 1px solid #e7e7e7;
-	border-bottom: 1px solid #e7e7e7;
+	border-top: 1px solid:#ccc;
+	border-bottom: 1px solid:#ccc;
+	background-color: #eee;
 	padding: 50px 0;
 }
 
@@ -5925,7 +5962,7 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 .section-heading-spacer {
-	border-top: 3px solid #e7e7e7;
+	border-top: 2px solid #999;
 	width: 200px;
 	float: left;
 }
@@ -5933,14 +5970,14 @@ body, h1, h2, h3, h4, h5, h6 {
 .banner {
 	padding: 100px 0;
 	color: #f8f8f8;
-	background: url(../img/banner-bg.jpg) no-repeat center center;
-	background-size: cover;
+	background-color:#111;
 }
 
 .banner h2 {
 	margin: 0;
-	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-	font-size: 3em;
+	/*text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);*/
+	font-size: 2em;
+	color:#999;
 }
 
 .banner ul {
@@ -5978,7 +6015,6 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 footer {
-	background-color: #f8f8f8;
 	padding: 50px 0;
 }
 
