@@ -13,7 +13,7 @@
 <link rel=apple-touch-icon-precomposed sizes=72x72 href="apple-touch-icon-72-precomposed.png"/>
 <link rel=apple-touch-icon-precomposed sizes=57x57 href="apple-touch-icon-57-precomposed.png"/>
 <link rel=apple-touch-icon-precomposed href="apple-touch-icon-precomposed.png"/>
-	<style>
+<style>
 	body {
 		margin:0;
 		padding:0;
@@ -38,29 +38,45 @@
 		background-color: rgb(255 255 255 / 0.75);
 		  color: #000;
 	}
-	.grid-container {
-		  display: grid;
-		  grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
-		  grid-gap: 1px;
-		margin-top:-60px;
-	}
-	.text-container {
+	.grid-container-text {
+		display: grid;
+		grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
+		grid-gap: 1px;
 		padding:75px 20px 10px 22px;
+	}
+	.grid-container {
+		display: grid;
+		grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
+		grid-gap: 1px;
+		margin-top:-60px;
 	}
 	.caption-text {
 		margin:0;
 		padding:0 10px;
 		font-size:90%;
 	}
-	/* only for non-mobile displays */
-	@media only screen and (min-width: 768px) {
-		.text-container {
-			max-width:1000px;
-			padding:75px 15% 0px 15%;
+	/* only for somewhat larger displays */
+	@media only screen and (min-width: 1280px) {
+		.grid-container-text {
+			max-width:1280px;
+			padding:75px 0 0 0;
+			margin-left:auto;
+			margin-right:auto;
 		}
 		.grid-container {
 			max-width:1440px;
-			margin-top:-45px
+			margin-top:-45px;
+		}
+		.text-container {
+			padding-left:5%;
+			padding-right:5%;
+		}
+	}
+	/* only for even larger displays */
+	@media only screen and (min-width: 1441px) {		
+		.grid-container {
+			margin-left:auto;
+			margin-right:auto;
 		}
 	}
 	a:link, a:visited, a:hover, a:active { text-decoration: none; }
@@ -155,14 +171,15 @@
 				<li><a href="index.html">Home</a></li>
 				<li><a href="test.html">Test</a></li>
 			</ul>
-		</nav>
+	</nav>
 
 		<main id="panel">
 			<header>
 				<button class="toggle-button button-logo" title="Main Navigation"></button>
 			</header>
 
-			<!-- SECTION 3 (text area) -->
+			<!-- SECTION 1 (text area) -->
+			<div class="grid-container-text">
 				<div class="text-container">
 					<h3 class="subhead">About this site</h3>
 					<p class="text">This site is designed to be mobile-first, minimalist, as lightweight and fast as possible, use no server side code, and have zero cost to host. Using the PageSpeed Insights online analysis tool, I fiddled with the code & design until I was able to reliably get speedy scores. The most interesting thing I did during that process was to call different resolution images for mobile vs desktop, and to use a CDN to automatically optimize images and serve them in next generation formats. Here are a few details about how it's wired up.</p>
@@ -176,8 +193,7 @@
 					<h3 class="subhead">Future</h3>
 					<p class="text">That's all for now. Image optimized pages to come.</p>
 				</div>
-
-		</div><!-- end of sections container -->
+			</div>
 
 		</main>
 
