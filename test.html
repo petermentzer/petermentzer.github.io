@@ -38,29 +38,45 @@
 		background-color: rgb(255 255 255 / 0.75);
 		  color: #000;
 	}
-	.grid-container {
-		  display: grid;
-		  grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
-		  grid-gap: 1px;
-		  margin-top:-60px;
-	}
-	.text-container {
+	.grid-container-text {
+		display: grid;
+		grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
+		grid-gap: 1px;
 		padding:75px 20px 10px 22px;
+	}
+	.grid-container {
+		display: grid;
+		grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
+		grid-gap: 1px;
+		margin-top:-60px;
 	}
 	.caption-text {
 		margin:0;
 		padding:0 10px;
 		font-size:90%;
 	}
-	/* only for non-mobile displays */
-	@media only screen and (min-width: 768px) {
-		.text-container {
-			max-width:1000px;
-			padding:75px 15% 0px 15%;
+	/* only for somewhat larger displays */
+	@media only screen and (min-width: 1280px) {
+		.grid-container-text {
+			max-width:1280px;
+			padding:75px 0 0 0;
+			margin-left:auto;
+			margin-right:auto;
 		}
 		.grid-container {
 			max-width:1440px;
-			margin-top:-45px
+			margin-top:-45px;
+		}
+		.text-container {
+			padding-left:5%;
+			padding-right:5%;
+		}
+	}
+	/* only for even larger displays */
+	@media only screen and (min-width: 1441px) {		
+		.grid-container {
+			margin-left:auto;
+			margin-right:auto;
 		}
 	}
 	a:link, a:visited, a:hover, a:active { text-decoration: none; }
@@ -164,9 +180,33 @@
 			</header>
 
 			<!-- SECTION 1 (text area) -->
-			<div class="text-container">
-				<h3 class="subhead">Test</h3>
-				<p class="text">A page with images.</p>
+			<div class="grid-container-text">
+				<div class="text-container">
+					<h3 class="subhead">Test</h3>
+					<p class="text">A page with images.</p>
+					<h3 class="subhead">About this site</h3>
+						<p class="text">This site is designed to be mobile-first, minimalist, as lightweight and fast as possible, use no server side code, and have zero cost to host. Using the PageSpeed Insights online analysis tool, I fiddled with the code & design until I was able to reliably get speedy scores. The most interesting thing I did during that process was to call different resolution images for mobile vs desktop, and to use a CDN to automatically optimize images and serve them in next generation formats. Here are a few details about how it's wired up.</p>
+						<ol>
+							<li>PageSpeed Insights scores: 100 mobile/100 desktop (this seems consistent)</li>
+							<li>Accessibility: WCAG 2.0 AA</li>
+							<li>Hosting: GitHub Pages</li>
+							<li>Image CDN: Cloudinary - Media Optimizer</li>
+							<li>Navigation: Slideout.js</li>
+						</ol>
+					<h3 class="subhead">Future</h3>
+					<p class="text">That's all for now. Image optimized pages to come.</p>
+				</div>
+				<!--
+				<div>
+					<p class="text">Here is a second div in the text area.</p>
+				</div>
+				<div>
+					<p class="text">Here is a third div in the text area.</p>
+				</div>
+				<div>
+					<p class="text">Here is a fourth div in the text area.</p>
+				</div>
+				-->
 			</div>
 
 			<!-- SECTION 2 (2 images) -->
